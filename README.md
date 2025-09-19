@@ -3,25 +3,23 @@ Title: Design of a RISC-V based processing system with AI acceleration-ready int
 
 RISC-V softcore to be implemented with a CNN 
 
-Remark:
+## Remark:
 Softcore implemented without CSR, which means it does not have ECALL & EBREAK
 CNN implemented is a minimal CNN which only does dot products between image (9x9) and kernel (3x3) matrices, future implementation on pooling and other functions
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
 
-SoftWare: 
+
+### SoftWare: 
 1) Microsoft VSCode (Verilog Extension)
 2) ModelSim (Simulation)
 3) Quartus Prime (FPGA Implementation)
 
-HardWare:
+### HardWare:
 1) Altera DE1 - SoC
 
-///////////////////////////////////////////////////////////////////////////////////////////////////
 
-===================
-===== Phase 1 =====
-===================
+
+## Phase 1
 
 - Implemented the very basic blocks of the RISC-V core: if - id - ex 
 - Done minimal pipelines
@@ -31,27 +29,21 @@ HardWare:
 
 
 
-===================
-===== Phase 2 =====
-===================
+## Phase 2
 
 - Added control unit for branch and jump
 - complete Type I, R, Jump, Branch, U
 
 
 
-=====================
-===== Phase 2.2 =====
-=====================  
+## Phase 2.2
 
 - Slight Optimization is made
 - minimized adder used in ex.v
 
 
 
-===================
-===== Phase 3 =====
-===================  
+## Phase 3
 
 - dual port - RAM created
 - Load and Store instruction added
@@ -61,18 +53,14 @@ HardWare:
 
 
 
-=====================
-===== Phase 3.5 =====
-===================== 
+## Phase 3.5
 
 - 7-segment decoder added
 - output led registers for testers added
 
 
 
-===================
-===== Phase 4 =====
-===================  
+## Phase 4
 
 **Incomplete
 - UART debug added
@@ -80,9 +68,7 @@ HardWare:
 
 
 
-=====================
-===== Phase 4.5 =====
-=====================
+## Phase 4.5
 
 **Incomplete (Main Focus, 19/9/2025)
 - Bus Decoder for memory mapping added
@@ -94,9 +80,7 @@ HardWare:
 
 
 
-================================================================================================================================================================
-========================================================================== TO DO LIST ==========================================================================
-================================================================================================================================================================
+## TO DO LIST
 
 1) ADD R32M subset
 2) give matrices, compare speed
