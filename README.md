@@ -62,7 +62,7 @@ CNN implemented is a minimal CNN which only does dot products between image (9x9
 
 ## Phase 4
 
-**Incomplete
+**Incomplete**
 - UART debug added
 - Flash instruction with UART to FPGA
 
@@ -70,7 +70,7 @@ CNN implemented is a minimal CNN which only does dot products between image (9x9
 
 ## Phase 4.5
 
-**Incomplete (Main Focus, 19/9/2025)
+**Incomplete (Main Focus, 19/9/2025)**
 - Bus Decoder for memory mapping added
 - Minimal CNN that does dot product added
 
