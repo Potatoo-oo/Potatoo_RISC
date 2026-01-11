@@ -1,0 +1,262 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/Softwares/modelsim_ase/win32aloem
+vdff_set
+Z0 !s110 1752312254
+!i10b 1
+!s100 08eah>oRCz9;5Sg<>Ca`f2
+I<^<U]^lXNgCT`@2IU<LJN0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/FYP/RISC-V_CPU/Phase_1/tb
+w1751993193
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/dff_set.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/dff_set.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1752312254.000000
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/dff_set.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/dff_set.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vex
+R0
+!i10b 1
+!s100 ]2hzQSan_jc1C1M9ZP2<k2
+I2zA7B1:7YAeM:jbSgNzMk1
+R1
+R2
+w1751993616
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/ex.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/ex.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\FYP\RISC-V_CPU\Phase_1\rtl\defines.v|E:/FYP/RISC-V_CPU/Phase_1/rtl/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/ex.v|
+!i113 1
+R5
+R6
+vid
+R0
+!i10b 1
+!s100 gJhS4Jc4^a51`@=>aNF?53
+I2jXbY6T`H^im]64OVL>;n2
+R1
+R2
+w1751993822
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/id.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/id.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\FYP\RISC-V_CPU\Phase_1\rtl\defines.v|E:/FYP/RISC-V_CPU/Phase_1/rtl/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/id.v|
+!i113 1
+R5
+R6
+vid_ex
+R0
+!i10b 1
+!s100 <g@bi:ebHe1caod?W:g8Z3
+Ia7J1JRGJcm?2@]]cW>Mi02
+R1
+R2
+w1752079904
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/id_ex.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/id_ex.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\FYP\RISC-V_CPU\Phase_1\rtl\defines.v|E:/FYP/RISC-V_CPU/Phase_1/rtl/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/id_ex.v|
+!i113 1
+R5
+R6
+vif_id
+R0
+!i10b 1
+!s100 eKI[N^Rz]Y:f:@BW?zdHN0
+IiDSb8B;;iYY?THnA8`RkJ1
+R1
+R2
+w1751994012
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/if_id.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/if_id.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\FYP\RISC-V_CPU\Phase_1\rtl\defines.v|E:/FYP/RISC-V_CPU/Phase_1/rtl/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/if_id.v|
+!i113 1
+R5
+R6
+vifetch
+!s110 1752312418
+!i10b 1
+!s100 h5N[e=3IX2I6@XU=XUkkg0
+IS^9j=D[ceLnWPLScO9Tnk3
+R1
+R2
+w1751469016
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/ifetch.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/ifetch.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1752312418.000000
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/ifetch.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/ifetch.v|
+!i113 1
+R5
+R6
+vopen_risc_v
+R0
+!i10b 1
+!s100 192_jHekQWP]O0NNlH?[00
+IWlbMZ?:R?NAElX47TJ@fk1
+R1
+R2
+w1752079831
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/open_risc_v.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/open_risc_v.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/open_risc_v.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/open_risc_v.v|
+!i113 1
+R5
+R6
+vopen_risc_v_soc
+R0
+!i10b 1
+!s100 83nB?VY9lhS>XdA3CEDNZ2
+IfmUW8?E<XM00iIll^iLcz0
+R1
+R2
+w1752079920
+8E:/FYP/RISC-V_CPU/Phase_1/tb/open_risc_v_soc.v
+FE:/FYP/RISC-V_CPU/Phase_1/tb/open_risc_v_soc.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FYP/RISC-V_CPU/Phase_1/tb/open_risc_v_soc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/tb/open_risc_v_soc.v|
+!i113 1
+R5
+R6
+vpc_reg
+R0
+!i10b 1
+!s100 ib5h>C8>Yd>fbgGKHNR1D3
+I8=^n4?b2HUQ7eC_O:m^;]3
+R1
+R2
+w1751459888
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/pc_reg.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/pc_reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/pc_reg.v|
+!i113 1
+R5
+R6
+vregs
+R0
+!i10b 1
+!s100 Cdz=U>j8Ko]T28zon0OY[3
+IcfMELL7?L9ECSB8^2=D9O1
+R1
+R2
+w1752070782
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/regs.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/regs.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/regs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/regs.v|
+!i113 1
+R5
+R6
+vrom
+R0
+!i10b 1
+!s100 Ommm0^QmY5^0nlHMPaW0=3
+I;AhR9OhV8oKCh^`cOBGT61
+R1
+R2
+w1752077534
+8E:/FYP/RISC-V_CPU/Phase_1/rtl/rom.v
+FE:/FYP/RISC-V_CPU/Phase_1/rtl/rom.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/FYP/RISC-V_CPU/Phase_1/rtl/rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_1/rtl/rom.v|
+!i113 1
+R5
+R6
+vtb
+!s110 1752313016
+!i10b 1
+!s100 lg1:zYUFjU[ZWned[TgmD0
+IQCoCdhjaH?:HHzN_TniWE0
+R1
+R2
+w1752313013
+8E:\FYP\RISC-V_CPU\Phase_1\tb\tb.v
+FE:\FYP\RISC-V_CPU\Phase_1\tb\tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1752313016.000000
+!s107 E:\FYP\RISC-V_CPU\Phase_1\tb\tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\FYP\RISC-V_CPU\Phase_1\tb\tb.v|
+!i113 1
+R5
+R6
