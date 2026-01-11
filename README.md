@@ -12,6 +12,7 @@ Softcore implemented without CSR, which means it does not have ECALL & EBREAK
 
 CNN implemented is a minimal CNN which only does dot products between image (9x9) and kernel (3x3) matrices, future implementation on pooling and other functions
 
+Please take note that this project is done solely for education purpose only
 
 
 ### SoftWare: 
