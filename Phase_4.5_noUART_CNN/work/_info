@@ -1,0 +1,409 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dJ:/FYP/RISC-V_CPU/Phase_3/tb
+vbus_decoder
+Z0 !s110 1768141759
+!i10b 1
+!s100 T[F]Zec[c0<1Jj067iz<`2
+IGnHNcUlD@dMTbEa=MAXfe2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN
+w1763400994
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1768141759.000000
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vcnn_accel
+R0
+!i10b 1
+!s100 ?9Wl8ZBW[FcRoG=G@2Sne3
+I1cF4KK@K2k45KA9nQ`diO3
+R1
+R2
+w1763402304
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+L0 311
+R3
+r1
+!s85 0
+31
+R4
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v|
+!i113 1
+R5
+R6
+vctrl
+R0
+!i10b 1
+!s100 hG_V1Do;M?8FB<i:G<mfz3
+IkONMnh=4RO@Z4X^SG8_5z2
+R1
+R2
+w1752322913
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v|
+!i113 1
+R5
+R6
+vdff_set
+!s110 1765762575
+!i10b 1
+!s100 @9H;>1GjAE7Q1<`?BAL0j2
+IW3oekD3ne1``oOkI<YLda2
+R1
+Z7 dE:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN
+w1752134723
+8E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dff_set.v
+FE:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dff_set.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1765762575.000000
+!s107 E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dff_set.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dff_set.v|
+!i113 1
+R5
+R6
+vdual_ram
+Z8 !s110 1765762574
+!i10b 1
+!s100 =d6;;Z@:>iQ2nS;k37jQJ0
+I=6YR`?5C:JeAaaFhB5`@?2
+R1
+R7
+Z9 w1756818647
+Z10 8E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dual_ram.v
+Z11 FE:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dual_ram.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z12 !s108 1765762574.000000
+Z13 !s107 E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dual_ram.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|E:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/utils/dual_ram.v|
+!i113 1
+R5
+R6
+vdual_ram_template
+R8
+!i10b 1
+!s100 7<GX>_nO9];Hbl66cG;fW2
+I8TAjUZa@2R=e1^Hl4mKK^3
+R1
+R7
+R9
+R10
+R11
+L0 63
+R3
+r1
+!s85 0
+31
+R12
+R13
+R14
+!i113 1
+R5
+R6
+vex
+R0
+!i10b 1
+!s100 ]i_4A3@02f^X9OLH@Nl^L3
+I`z09aj16I:SHgC3z9781g2
+R1
+R2
+w1768110294
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 J:\FYP\RISC-V_CPU\Phase_4.5_noUART_CNN\rtl\defines.v|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v|
+!i113 1
+R5
+R6
+vid
+!s110 1768142776
+!i10b 1
+!s100 QM8:]MC1_h6F5JR`AmiRD3
+I?33]d_zT6f:lT0V92VBPn2
+R1
+R2
+w1768142765
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1768142776.000000
+!s107 J:\FYP\RISC-V_CPU\Phase_4.5_noUART_CNN\rtl\defines.v|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v|
+!i113 1
+R5
+R6
+vid_ex
+Z15 !s110 1768141760
+!i10b 1
+!s100 e[SA^jaeco7FPGa_:PW562
+I[d8kmZ6<`XUcN4z`2g7Uc3
+R1
+R2
+w1754929546
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v
+L0 5
+R3
+r1
+!s85 0
+31
+Z16 !s108 1768141760.000000
+!s107 J:\FYP\RISC-V_CPU\Phase_4.5_noUART_CNN\rtl\defines.v|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v|
+!i113 1
+R5
+R6
+vif_id
+R15
+!i10b 1
+!s100 1_]^mmRD9;zK<5]@9f3P10
+I1BlVi<`8HgFjIil9Bl6`E2
+R1
+R2
+w1753501894
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v
+L0 4
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:\FYP\RISC-V_CPU\Phase_4.5_noUART_CNN\rtl\defines.v|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v|
+!i113 1
+R5
+R6
+vopen_risc_v
+R15
+!i10b 1
+!s100 kfA?lHfAZ8ZHXR[dLKdJ31
+IDa?f>;^E_?jBcVWJ[]Xa90
+R1
+R2
+w1756819850
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v|
+!i113 1
+R5
+R6
+vopen_risc_v_soc
+R15
+!i10b 1
+!s100 IW[8zTlZGVNT3e]m=:IbP1
+Ic@_`Jj8mg;:T8bDnDkfEU1
+R1
+R2
+w1763401003
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v|
+!i113 1
+R5
+R6
+vpc_reg
+R15
+!i10b 1
+!s100 U>Z]4=JCFQFidYD@YJ=Hd3
+IeXPeKCaIFioQPm1Hio0[61
+R1
+R2
+w1755523282
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v|
+!i113 1
+R5
+R6
+vram
+R15
+!i10b 1
+!s100 ;o5a]7MJ]7hej>RKKmX`n3
+IN[od<mNmgML@MQRU]Vh2_0
+R1
+R2
+w1757325105
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v|
+!i113 1
+R5
+R6
+vregs
+R15
+!i10b 1
+!s100 _obP8]FZL_]^FX_cOiM@02
+I6fEal[j3[m:kKY@:klffR2
+R1
+R2
+w1756819539
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v|
+!i113 1
+R5
+R6
+vrom
+!s110 1768142811
+!i10b 1
+!s100 7ziKD57`MWCf59WgmQ]hE0
+I4d6LE^]7J>Djb^F0n3hhQ2
+R1
+R2
+w1768142802
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1768142811.000000
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v|
+!i113 1
+R5
+R6
+vseven_seg_decoder
+R0
+!i10b 1
+!s100 GWbWVHUaF?<PdgKGKO`Oe0
+IRMPdXTCIaGL4JnnOHgcU^1
+R1
+R2
+w1756813427
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v|
+!i113 1
+R5
+R6
+vtb
+R15
+!i10b 1
+!s100 l:7CDM>f2:IL;NY@J@P?=0
+IZZ;UCN>0790^RYfE5N23a0
+R1
+R2
+w1763397854
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v|
+!i113 1
+R5
+R6
+vtb_cnn_accel
+R15
+!i10b 1
+!s100 54h^f0bZL>M43gK5CaT8=3
+IO@1E@APNELddmQM0?7dfa0
+R1
+R2
+w1762839304
+8J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v
+FJ:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v|
+!s90 -reportprogress|300|-work|work|-stats=none|J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v|
+!i113 1
+R5
+R6

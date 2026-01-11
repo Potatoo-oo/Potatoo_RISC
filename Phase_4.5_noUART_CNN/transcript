@@ -1,0 +1,529 @@
+# Compile of rom.v was successful.
+# Compile of 7_segment_decoder.v was successful.
+# Compile of bus_decoder.v was successful.
+# Compile of cnn.v failed with 22 errors.
+# Compile of ctrl.v was successful.
+# Compile of defines.v was successful.
+# Compile of ex.v was successful.
+# Compile of id.v was successful.
+# Compile of id_ex.v was successful.
+# Compile of if_id.v was successful.
+# Compile of open_risc_v.v was successful.
+# Compile of pc_reg.v was successful.
+# Compile of ram.v was successful.
+# Compile of regs.v was successful.
+# Compile of tb_pyscript.v was successful.
+# Compile of open_risc_v_soc.v was successful.
+# Compile of tb.v was successful.
+# Compile of tb_cnn.v failed with 2 errors.
+# 18 compiles, 2 failed with 24 errors.
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v was successful.
+vsim work.tb_cnn_accel
+# vsim work.tb_cnn_accel 
+# Start time: 17:19:36 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Error (suppressible): (vsim-3053) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): Illegal output or inout port connection for port 'rdata'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# Error loading design
+# End time: 17:19:36 on Oct 26,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+module cnn_accel(
+# bad option "cnn_accel(": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+
+    // CONVOLUTION
+# invalid command name "//"
+    always @(posedge clk)begin
+# invalid command name "always"
+        if (!rst) begin
+# invalid bareword "rst"
+# in expression "(!rst)";
+# should be "$rst" or "{rst}" or "rst(...)" or ...
+            done <= 1'b0;
+# invalid command name "done"
+        end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+        else if (start) begin
+# invalid command name "else"
+
+            //perform 3x3 convolution over 5x5 image
+# invalid command name "//perform"
+            for( i = 0 ; i < 3 ; i = i + 1 )begin
+# invalid command name "for("
+                for( j = 0 ; j < 3 ; j = j + 1 )begin
+# invalid command name "for("
+                    sum = 0;
+# invalid command name "sum"
+
+                    for( m = 0 ; m < 3 ; m = m + 1 )begin
+# invalid command name "for("
+                        for( n = 0 ; n < 3 ; n = n + 1 ) begin
+# invalid command name "for("
+                            sum = sum + image[(i + m) * 5 + (j + n)] * kernel [m * 3 + n];          //accumulator
+# invalid command name "(i"
+                            // 1D array index = row * total column + column - kernel
+# invalid command name "//"
+                            // +m and +n is because of deal with 5x5 and 3x3, kernel next row, img next row
+# invalid command name "//"
+                        end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+                    end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+
+                    result[i*3 + j] <= sum[15:0];
+# invalid command name "i*3"
+                end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+            end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+
+            done    <= 1'b1;
+# invalid command name "done"
+            start   <= 1'b0;                    // auto clear
+# couldn't read file "=": no such file or directory
+        end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+    end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+
+    // READ OPERATION
+# invalid command name "//"
+    always @(*)begin
+# invalid command name "always"
+        if (cnn_en && r_en)begin 
+# invalid bareword "cnn_en"
+# in expression "(cnn_en";
+# should be "$cnn_en" or "{cnn_en}" or "cnn_en(...)" or ...
+            case(local_r_addr)
+# invalid command name "case(local_r_addr)"
+                12'h000: rdata = {30'b0, done, start};  //CTRL register
+# invalid command name "12'h000:"
+                12'h080: rdata = {16'b0, result[0]};
+# invalid command name "12'h080:"
+                12'h084: rdata = {16'b0, result[1]};
+# invalid command name "12'h084:"
+                12'h088: rdata = {16'b0, result[2]};
+# invalid command name "12'h088:"
+                12'h08C: rdata = {16'b0, result[3]};
+# invalid command name "12'h08C:"
+                12'h090: rdata = {16'b0, result[4]};
+# invalid command name "12'h090:"
+                12'h094: rdata = {16'b0, result[5]};
+# invalid command name "12'h094:"
+                12'h098: rdata = {16'b0, result[6]};
+# invalid command name "12'h098:"
+                12'h09C: rdata = {16'b0, result[7]};
+# invalid command name "12'h09C:"
+                12'h0A0: rdata = {16'b0, result[8]};
+# invalid command name "12'h0A0:"
+                default: rdata = 32'b0;
+# invalid command name "default:"
+            endcase
+# invalid command name "endcase"
+        end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+        else begin
+# invalid command name "else"
+            rdata = 32'b0;                              // Default not driving bus
+# invalid command name "rdata"
+        end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+    end
+# wrong # args: should be "endpoint_image option ?arg arg ...?"
+
+
+endmodule
+# invalid command name "endmodule"
+clear
+# invalid command name "clear"
+vsim work.tb_cnn_accel
+# vsim work.tb_cnn_accel 
+# Start time: 17:24:34 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/uut/image
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/uut/kernel
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/uut/result
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(103)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 103
+run
+# Compile of tb_cnn.v was successful.
+vsim work.tb_cnn_accel
+# End time: 17:44:41 on Oct 26,2025, Elapsed time: 0:20:07
+# Errors: 0, Warnings: 0
+# vsim work.tb_cnn_accel 
+# Start time: 17:44:41 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/uut/image \
+sim:/tb_cnn_accel/uut/kernel \
+sim:/tb_cnn_accel/uut/result
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(107)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 107
+run
+run
+run
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v failed with 1 errors.
+# Compile of tb_cnn.v was successful.
+vsim work.tb_cnn_accel
+# End time: 17:49:37 on Oct 26,2025, Elapsed time: 0:04:56
+# Errors: 0, Warnings: 0
+# vsim work.tb_cnn_accel 
+# Start time: 17:49:37 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Error: (vsim-3043) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(103): Unresolved reference to 'i'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v
+# Error loading design
+# End time: 17:49:38 on Oct 26,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of tb_cnn.v was successful.
+vsim work.tb_cnn_accel
+# vsim work.tb_cnn_accel 
+# Start time: 17:50:08 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/i_loop
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(107)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 107
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/wdata
+restart
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(107)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 107
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/value
+restart
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(107)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 107
+run
+# Compile of cnn.v failed with 1 errors.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_cnn_accel
+# End time: 18:03:21 on Oct 26,2025, Elapsed time: 0:13:13
+# Errors: 0, Warnings: 0
+# vsim work.tb_cnn_accel 
+# Start time: 18:03:21 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/wdata
+restart
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_cnn_accel
+# End time: 18:09:00 on Oct 26,2025, Elapsed time: 0:05:39
+# Errors: 0, Warnings: 4
+# vsim work.tb_cnn_accel 
+# Start time: 18:09:01 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/value
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/wdata
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+run
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_cnn_accel
+# End time: 18:10:58 on Oct 26,2025, Elapsed time: 0:01:57
+# Errors: 0, Warnings: 2
+# vsim work.tb_cnn_accel 
+# Start time: 18:10:58 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/wdata
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =     x
+# result[1] =     x
+# result[2] =     x
+# result[3] =     x
+# result[4] =     x
+# result[5] =     x
+# result[6] =     x
+# result[7] =     x
+# result[8] =     x
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_cnn_accel
+# End time: 18:14:34 on Oct 26,2025, Elapsed time: 0:03:36
+# Errors: 0, Warnings: 2
+# vsim work.tb_cnn_accel 
+# Start time: 18:14:34 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+add wave -position insertpoint sim:/tb_cnn_accel/uut/*
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/wdata
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =   528
+# result[1] =   582
+# result[2] =   636
+# result[3] =   798
+# result[4] =   852
+# result[5] =   906
+# result[6] =  1068
+# result[7] =  1122
+# result[8] =  1176
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+add wave -position insertpoint  \
+sim:/tb_cnn_accel/i_loop
+restart
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =   528
+# result[1] =   582
+# result[2] =   636
+# result[3] =   798
+# result[4] =   852
+# result[5] =   906
+# result[6] =  1068
+# result[7] =  1122
+# result[8] =  1176
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+# Compile of cnn.v was successful.
+# Compile of tb_cnn.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_cnn_accel
+# End time: 18:21:49 on Oct 26,2025, Elapsed time: 0:07:15
+# Errors: 0, Warnings: 4
+# vsim work.tb_cnn_accel 
+# Start time: 18:21:49 on Oct 26,2025
+# Loading work.tb_cnn_accel
+# Loading work.cnn_accel
+# ** Warning: (vsim-3017) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Too few port connections. Expected 10, found 9.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cnn_accel/uut File: J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+# ** Warning: (vsim-3722) J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(14): [TFMPC] - Missing connection for port 'done'.
+run
+# Writing Image Data (5x5)...
+# Writing Kernel Data (3x3)...
+# Starting CNN Convolution...
+# Waiting for CNN to complete...
+# Reading CNN Results...
+# result[0] =   411
+# result[1] =   456
+# result[2] =   501
+# result[3] =   636
+# result[4] =   681
+# result[5] =   726
+# result[6] =   861
+# result[7] =   906
+# result[8] =   951
+# === CNN Test Completed ===
+# ** Note: $stop    : J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v(109)
+#    Time: 9901 ps  Iteration: 0  Instance: /tb_cnn_accel
+# Break in Module tb_cnn_accel at J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v line 109
+# End time: 21:13:16 on Oct 26,2025, Elapsed time: 2:51:27
+# Errors: 0, Warnings: 2

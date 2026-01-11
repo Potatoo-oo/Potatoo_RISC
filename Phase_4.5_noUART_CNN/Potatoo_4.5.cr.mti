@@ -1,0 +1,123 @@
+J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module id
+
+Top level modules:
+	id
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ex.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ex
+
+Top level modules:
+	ex
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/rom.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module rom
+
+Top level modules:
+	rom
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/defines.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/defines.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/7_segment_decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module seven_seg_decoder
+
+Top level modules:
+	seven_seg_decoder
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/open_risc_v_soc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module open_risc_v_soc
+
+Top level modules:
+	open_risc_v_soc
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/bus_decoder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bus_decoder
+
+Top level modules:
+	bus_decoder
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_pyscript.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_pyscript.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/open_risc_v.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module open_risc_v
+
+Top level modules:
+	open_risc_v
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb_cnn.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb_cnn_accel
+
+Top level modules:
+	tb_cnn_accel
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ram.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ram
+
+Top level modules:
+	ram
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/regs.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module regs
+
+Top level modules:
+	regs
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/ctrl.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/cnn.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module cnn_accel
+
+Top level modules:
+	cnn_accel
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/pc_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module pc_reg
+
+Top level modules:
+	pc_reg
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/id_ex.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module id_ex
+
+Top level modules:
+	id_ex
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/tb/tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v {1 {vlog -work work -stats=none J:/FYP/RISC-V_CPU/Phase_4.5_noUART_CNN/rtl/if_id.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module if_id
+
+Top level modules:
+	if_id
+
+} {} {}}
