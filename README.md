@@ -66,7 +66,7 @@ Please take note that this project is done solely for education purpose only
 
 
 
-## Phase 4
+## Phase 4 (Incomplete, Discontinued)
 
 **Incomplete**
 - UART debug added
