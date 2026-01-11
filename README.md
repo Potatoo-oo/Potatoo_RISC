@@ -75,9 +75,12 @@ CNN implemented is a minimal CNN which only does dot products between image (9x9
 
 ## Phase 4.5
 
-**Incomplete (Main Focus, 19/9/2025)**
 - Bus Decoder for memory mapping added
 - Minimal CNN that does dot product added
+- Added RV32M subset instructions
+- have two main instructions to compare the speed of convolution with and without CNN module
+- FPGA Implementation is added
+- Pre-Flash function to ROM is added for FPGA implementation
 
 
 
@@ -87,5 +90,5 @@ CNN implemented is a minimal CNN which only does dot products between image (9x9
 
 ## TO DO LIST
 
-1) ADD R32M subset
-2) give matrices, compare speed
+1) compare speed
+2) FPGA Implementation - showing results (Phase 6)
