@@ -1,6 +1,10 @@
 # Potatoo_RISC
 Title: Design of a RISC-V based processing system with AI acceleration-ready interface architecture
 
+## Important:
+1) Remember to include the test instructions when trying to run any of the tests
+2) FPGA Implementation is not uploaded (yet)
+
 RISC-V softcore to be implemented with a CNN 
 
 ## Remark:
